@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".walletix.ExpenseFragment">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/gradient_card"
+        android:gravity="center"
+        android:text="Harcama Ekle"
+        android:layout_marginTop="80dp"
+        android:textAllCaps="true"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/explainInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Açıklama Giriniz"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginTop="40dp"
+        app:rippleColor="#BEFEA8"
+        app:strokeColor="#14684E">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/expInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:outlineSpotShadowColor="@color/black"
+            app:cornerRadius="50dp"
+            app:rippleColor="#BEFEA8"
+            app:strokeColor="#14684E"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amountInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Tutarı Giriniz"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/explainInput"
+        android:layout_marginTop="20dp"
+        app:rippleColor="#BEFEA8"
+        app:strokeColor="#14684E">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ampInput"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:outlineSpotShadowColor="@color/black"
+            app:cornerRadius="50dp"
+            app:rippleColor="#BEFEA8"
+            app:strokeColor="#14684E"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/addBtn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Harcama Ekle"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:rippleColor="#BEFEA8"
+        app:strokeColor="#14684E" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/amountInput">
+
+        <RadioButton
+            android:id="@+id/radioİnvoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fatura" />
+
+        <RadioButton
+            android:id="@+id/radioRent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kira" />
+
+        <RadioButton
+            android:id="@+id/radioOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diğer" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2">
+
+        <RadioButton
+            android:id="@+id/radioTl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="TL" />
+
+        <RadioButton
+            android:id="@+id/radioDollar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="Dolar" />
+
+        <RadioButton
+            android:id="@+id/radioEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="Euro" />
+
+        <RadioButton
+            android:id="@+id/radioPound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sterlin" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
